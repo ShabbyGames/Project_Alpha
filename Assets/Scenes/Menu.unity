@@ -102,7 +102,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 742371182}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!61 &84834019
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -336,7 +336,7 @@ GameObject:
   - 212: {fileID: 308230189}
   - 114: {fileID: 308230188}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: RingSegment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -383,11 +383,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 308230187}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0497730225, y: -.77152431, z: 0}
+  m_LocalPosition: {x: -.195976779, y: -2.26804924, z: 6.84863281}
   m_LocalScale: {x: .559515417, y: .559514165, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 841566772}
+  m_RootOrder: 3
 --- !u!1 &421571309
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,7 +665,7 @@ GameObject:
   - 212: {fileID: 689968308}
   - 114: {fileID: 689968307}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: RingSegment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -712,11 +712,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 689968306}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0735796094, y: -.770210922, z: 0}
+  m_LocalPosition: {x: -.219783366, y: -2.26673603, z: 6.84863281}
   m_LocalScale: {x: .816044331, y: .816043913, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 841566772}
+  m_RootOrder: 2
 --- !u!1 &742371181
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,6 +743,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 841566772}
   - {fileID: 951460079}
   - {fileID: 84834018}
   m_Father: {fileID: 1794121716}
@@ -958,6 +959,37 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!1 &841566771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 841566772}
+  m_Layer: 0
+  m_Name: Rings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &841566772
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 841566771}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .146203756, y: 1.49652505, z: -6.84863281}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 935507969}
+  - {fileID: 1340895134}
+  - {fileID: 689968309}
+  - {fileID: 308230190}
+  m_Father: {fileID: 742371182}
+  m_RootOrder: 0
 --- !u!1 &935507967
 GameObject:
   m_ObjectHideFlags: 0
@@ -969,7 +1001,7 @@ GameObject:
   - 212: {fileID: 935507968}
   - 114: {fileID: 935507970}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: RingSegment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1004,11 +1036,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 935507967}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0143313408, y: -.757651448, z: 0}
+  m_LocalPosition: {x: -.131872416, y: -2.25417662, z: 6.84863281}
   m_LocalScale: {x: 1.43904173, y: 1.4390415, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 841566772}
+  m_RootOrder: 0
 --- !u!114 &935507970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1050,7 +1082,7 @@ Transform:
   m_LocalScale: {x: .100000001, y: .100000001, z: 1}
   m_Children: []
   m_Father: {fileID: 742371182}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!114 &951460080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1186,7 +1218,7 @@ GameObject:
   - 212: {fileID: 1340895133}
   - 114: {fileID: 1340895132}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: RingSegment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1233,11 +1265,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1340895131}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0673013926, y: -.763929546, z: 0}
+  m_LocalPosition: {x: -.213505149, y: -2.26045465, z: 6.84863281}
   m_LocalScale: {x: 1.13244772, y: 1.13244879, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 841566772}
+  m_RootOrder: 1
 --- !u!1 &1605963181
 GameObject:
   m_ObjectHideFlags: 0
