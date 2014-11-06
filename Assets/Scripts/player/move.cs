@@ -15,6 +15,6 @@ public class move : MonoBehaviour {
         rigidbody.AddForce(Vector3.back * Input.GetAxis("Horizontal") * 100f);
         rigidbody.AddForce(Vector3.right * Input.GetAxis("Vertical") * 100f);
 
-        Debug.Log(Vector3.down * Input.GetAxis("Horizontal") * 100f);
+        transform.rotation = Quaternion.Euler(new Vector3(-25f * Input.GetAxis("Horizontal"), 0, 0));
 	}
 }
