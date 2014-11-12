@@ -24,7 +24,7 @@ public class RotationHelper : MonoBehaviour {
 
         if (newRot.z <= -360)
             newRot.z += 360;
-
+        
         transform.rotation = Quaternion.Euler(newRot);
     }
 }
