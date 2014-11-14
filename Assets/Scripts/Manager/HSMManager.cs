@@ -51,6 +51,7 @@ public class HSMManager : MonoBehaviour
             {
                 if (HSM.CastSpell(20))
                     print("casted a spell");
+                HSM.Stamina += 20f;
             }
     }
 

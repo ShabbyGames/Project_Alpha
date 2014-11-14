@@ -8,6 +8,8 @@ public class NavTarget : MonoBehaviour {
     private Transform target;
     private NavMeshAgent agent;
 
+    [SerializeField]
+    bool canAlwaysSee;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -15,11 +17,11 @@ public class NavTarget : MonoBehaviour {
     }
 
 	void Update () {
-        if (agent.destination != target.position && Vector3.Distance(target.position, transform.position) < 15f)
+        if (canAlwaysSee||agent.destination != target.position && Vector3.Distance(target.position, transform.position) < 15f)
         {
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, target.position - transform.position, out hit, 100))
-                if (hit.transform.gameObject.tag == "Player")
+            if (canAlwaysSee || Physics.Raycast(transform.position, target.position - transform.position, out hit, 100))
+                if (canAlwaysSee || hit.transform.gameObject.tag == "Player")
                     agent.SetDestination(target.position);
         }
 	}
